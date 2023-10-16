@@ -1,1 +1,20 @@
-hello world
+<!doctype html>
+<html>
+    <head>
+        <meta charset="ja">
+        <title>data 1</title>
+    </head>
+    <div>hello world</div>
+</html>
+<script type="text/javascript">
+    var data_url = new XMLHttpRequest();
+ 
+ data_url.open('GET', 'https://lext21.github.io/develop/post.html');
+ data_url.send();
+  
+ data_url.onreadystatechange = function() {
+     if(data_url.readyState === 4 && data_url.status === 200) {
+        console.log(data_url.responseText);
+     }
+ }
+</script>
