@@ -7,14 +7,30 @@
     <div>hello world</div>
 </html>
 <script type="text/javascript">
+    //get
     var data_url = new XMLHttpRequest();
  
- data_url.open('GET', 'https://lext21.github.io/develop/post.html');
- data_url.send();
+     data_url.open('GET', 'https://lext21.github.io/develop/post.html');
+     data_url.send();
   
- data_url.onreadystatechange = function() {
-     if(data_url.readyState === 4 && data_url.status === 200) {
-        console.log(data_url.responseText);
+     data_url.onreadystatechange = function() {
+         if(data_url.readyState === 4 && data_url.status === 200) {
+         console.log(data_url.responseText);
+         }
      }
- }
+
+    //post受信
+    var maxData = 5 * 1024 * 1024;
+
+
+req.on('data', function(chunk) {
+
+    data += chunk
+
+    if(data.length > maxData) {
+        res.writeHead(413);
+        res.end('送信データのサイズは5MB以内にしてください');
+    }
+
+})
 </script>
