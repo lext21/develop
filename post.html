@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="ja">
+        <title>data 2</title>
+    </head>
+    <div>hello world</div>
+</html>
+<script type="text/javascript">
+    let txt = prompt("plz, enter text");
+    var send_data = new XMLHttpRequest();
+ 
+    send_data.open('POST', 'https://lext21.github.io/develop/index.html');
+    send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    send_data.send('d=' + txt);
+</script>
