@@ -10,7 +10,7 @@
     let txt = prompt("plz, enter text");
     var send_data = new XMLHttpRequest();
  
-    send_data.open('POST', 'https://script.google.com/macros/s/AKfycbyo02hv6CAsPaqtFAEFMs7qqEEY6Ym4XKUapJtqHY0NyZA-jdqtjNwUqopXNuwn82ly/exec');
+    send_data.open('POST', 'https://script.google.com/macros/s/AKfycbwsfAvLtX3S2wj3dtSVqQcKfxd93zru0C0uLkORKETyQuZ4Ts81BgMKOP10K3h8s3w_/exec');
     send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-    send_data.send('d=' + txt);
+    send_data.send(txt);
 </script>
