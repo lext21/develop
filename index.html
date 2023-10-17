@@ -20,17 +20,7 @@
      }
 
     //post受信
-    var maxData = 5 * 1024 * 1024;
-
-
-req.on('data', function(chunk) {
-
-    data += chunk
-
-    if(data.length > maxData) {
-        res.writeHead(413);
-        res.end('送信データのサイズは5MB以内にしてください');
-    }
-
-})
+    app.post('/path', function(req, res) {
+        console.log("successful");
+    });
 </script>
